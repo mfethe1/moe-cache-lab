@@ -1,0 +1,142 @@
+{
+ "experiment": "exp356",
+ "method": "ctypes cudart, cudaHostAlloc WC vs default vs pageable, 10 warmup + 50 trials, per-trial sync",
+ "results": {
+  "gpu0": {
+   "576KiB q4_K expert": {
+    "pageable": {
+     "median_ms": 0.4307,
+     "min_ms": 0.4262,
+     "max_ms": 0.7816,
+     "GBps": 1.3695
+    },
+    "pinned_default": {
+     "median_ms": 0.4595,
+     "min_ms": 0.4028,
+     "max_ms": 0.5052,
+     "GBps": 1.2835
+    },
+    "wc": {
+     "median_ms": 0.4513,
+     "min_ms": 0.4081,
+     "max_ms": 0.4926,
+     "GBps": 1.3069
+    },
+    "wc_split": {
+     "median_ms": 0.4463,
+     "min_ms": 0.4198,
+     "max_ms": 0.6844,
+     "GBps": 1.3217
+    }
+   },
+   "2.5MiB exp211 anchor": {
+    "pageable": {
+     "median_ms": 1.8148,
+     "min_ms": 1.7664,
+     "max_ms": 3.0329,
+     "GBps": 1.4445
+    },
+    "pinned_default": {
+     "median_ms": 1.7479,
+     "min_ms": 1.7087,
+     "max_ms": 1.9357,
+     "GBps": 1.4998
+    },
+    "wc": {
+     "median_ms": 1.7166,
+     "min_ms": 1.7065,
+     "max_ms": 1.7584,
+     "GBps": 1.5271
+    }
+   },
+   "13.5MiB exp87 FP16 layer": {
+    "pageable": {
+     "median_ms": 8.7893,
+     "min_ms": 8.7676,
+     "max_ms": 9.3053,
+     "GBps": 1.5359
+    },
+    "pinned_default": {
+     "median_ms": 8.7402,
+     "min_ms": 8.7056,
+     "max_ms": 8.8788,
+     "GBps": 1.5446
+    },
+    "wc": {
+     "median_ms": 8.7381,
+     "min_ms": 8.7113,
+     "max_ms": 9.016,
+     "GBps": 1.545
+    }
+   }
+  },
+  "gpu1": {
+   "576KiB q4_K expert": {
+    "pageable": {
+     "median_ms": 0.11,
+     "min_ms": 0.0947,
+     "max_ms": 0.2102,
+     "GBps": 5.3645
+    },
+    "pinned_default": {
+     "median_ms": 0.069,
+     "min_ms": 0.051,
+     "max_ms": 0.1037,
+     "GBps": 8.5482
+    },
+    "wc": {
+     "median_ms": 0.0734,
+     "min_ms": 0.0675,
+     "max_ms": 0.782,
+     "GBps": 8.0358
+    },
+    "wc_split": {
+     "median_ms": 0.0785,
+     "min_ms": 0.0725,
+     "max_ms": 0.0919,
+     "GBps": 7.5145
+    }
+   },
+   "2.5MiB exp211 anchor": {
+    "pageable": {
+     "median_ms": 0.2776,
+     "min_ms": 0.2623,
+     "max_ms": 0.6548,
+     "GBps": 9.4449
+    },
+    "pinned_default": {
+     "median_ms": 0.2202,
+     "min_ms": 0.2107,
+     "max_ms": 0.2313,
+     "GBps": 11.9075
+    },
+    "wc": {
+     "median_ms": 0.2207,
+     "min_ms": 0.2117,
+     "max_ms": 0.5119,
+     "GBps": 11.8805
+    }
+   },
+   "13.5MiB exp87 FP16 layer": {
+    "pageable": {
+     "median_ms": 1.6727,
+     "min_ms": 1.2944,
+     "max_ms": 3.3039,
+     "GBps": 8.0705
+    },
+    "pinned_default": {
+     "median_ms": 1.0131,
+     "min_ms": 0.9831,
+     "max_ms": 1.0637,
+     "GBps": 13.3261
+    },
+    "wc": {
+     "median_ms": 1.015,
+     "min_ms": 0.9834,
+     "max_ms": 1.104,
+     "GBps": 13.2998
+    }
+   }
+  }
+ }
+}
