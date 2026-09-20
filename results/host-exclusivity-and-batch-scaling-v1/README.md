@@ -97,8 +97,19 @@ sweeping the slope prior as a sensitivity check:
 | 1.0 | 0.351 | 18,654 |
 
 **The b=64 prediction moves 25x on prior choice alone.** Six batch points do not
-dominate the prior. Inside the measured range the fit is tight; outside it, nothing
-is established.
+dominate the prior.
+
+Two cautions about that table, both of which make it *more* damning rather than less.
+The NIG model is fitted on raw batch against log step time, so it is a straight line
+through data that is manifestly a power law — a misspecification, and its in-range mean
+absolute percentage error is correspondingly poor (0.46-1.23 depending on prior scale).
+Its 95% predictive intervals at b=64 span roughly [60, 9065], [1723, 112213] and
+[2728, 127551] — three orders of magnitude, i.e. effectively vacuous.
+
+The well-specified OLS power-law fit *is* tight in-range (R^2 = 0.9876) and extrapolates
+to ~1550 tok/s at b=64. That number is stated here only as a **pre-registerable
+prediction to be tested**, not as a result: it is still one octave beyond the measured
+ladder.
 
 `sigma ~= 0.09` is the signature of decode being memory-bandwidth bound and far from
 compute saturation — a regime that **must** end at some batch size. The ladder stopped
