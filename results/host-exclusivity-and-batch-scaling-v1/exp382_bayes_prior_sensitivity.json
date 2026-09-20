@@ -1,0 +1,14 @@
+{
+ "0.1": {
+  "slope_mean": 0.10969560581753043,
+  "pred": "[{\"prediction\": 737.8779578709995, \"log_location\": 6.603778442187072, \"log_student_t_scale\": 1.1257641779550063, \"df\": 10.0, \"conditional_95_interval\""
+ },
+ "0.5": {
+  "slope_mean": 0.3292297433233633,
+  "pred": "[{\"prediction\": 13905.608560907269, \"log_location\": 9.540047531327586, \"log_student_t_scale\": 0.937152396692405, \"df\": 10.0, \"conditional_95_interval\""
+ },
+ "1.0": {
+  "slope_mean": 0.3511936455881603,
+  "pred": "[{\"prediction\": 18653.97845151674, \"log_location\": 9.833814724119247, \"log_student_t_scale\": 0.8628088544191477, \"df\": 10.0, \"conditional_95_interval\""
+ }
+}
